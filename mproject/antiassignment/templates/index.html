@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anti Assignment Piracy System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{% static '3408105.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;8
+        }
+        .menu {
+            list-style: none;
+            width: 25%;
+            margin: auto;
+            padding: 35px 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+        }
+        .menu li {
+            display: inline;
+            margin: 0 20px;
+            position: relative;
+        }
+        .menu a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .menu li::after{
+            content: '';
+            height: 3px;
+            width: 0;
+            background: #007BFF;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        .menu li:hover::after{
+            width: 100%;
+
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 40px;
+            max-width: 600px;
+        }
+        h1 {
+            color: #000000;
+        }
+        p {
+            font-size: 18px;
+            color: #1b1a1a;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            background:transparent;
+            color:#171717;
+            border: 2px solid #171717;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 20px 10px;
+            transition: background-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background: #171717;
+            height: 100%;
+            width: 100%;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        .button:hover span{
+            background-color: #5795d7;
+            width: 100%;
+        }
+        .button:hover{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Service</a></li>
+        
+    </ul>
+    <div class="container">
+        <h1>Welcome to the Anti Assignment Piracy System</h1>
+        <p>"Assignment piracy undermines the foundation of genuine knowledge."</p>
+        <p>Please log in or sign up to access the system:</p>
+
+        <div class="button-container">
+            <a href="/login/" class="button"><span></span>Login</a>
+            <a href="/signup/" class="button"><span></span>Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment Submission</title>
+</head>
+<body>
+    <h1>Assignment Submission</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        
+        
+        <label for="subject">Select Subject:</label>
+        <select name="subject" id="subject">
+            <option value="math">DATA MINING AND WAREHOUSING</option>
+            <option value="science">COMPUTER GRAPHICS AND MULTIMEDIA</option>
+            <option value="history">MACHINE LEARNING</option>
+            <option value="history">THEORY OF COMPUTATION</option>
+            <option value="history">BIG DATA</option>
+            <!-- Add options for other subjects here -->
+        </select>
+
+        <br>
+
+        <label for="title">Assignment Title:</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="file">Upload Assignment (PDF only):</label>
+        <input type="file" name="file" id="file" accept=".pdf" required>
+        
+        <br>
+
+        <input type="submit" value="Submit Assignment">
+    </form>
+</body>
+</html>
